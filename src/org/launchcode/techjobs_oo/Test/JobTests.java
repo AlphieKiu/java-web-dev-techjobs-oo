@@ -9,7 +9,7 @@ public class JobTests {
    private static Job test_job = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
    private static Job test_job2 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
    private static Job test_job_empty= new Job();
-   private static Job test_job_emptyField = new Job ("Product tester", new Employer(), new Location(), new PositionType("Quality control"),new CoreCompetency("Persistence"));
+   private static Job test_job_emptyField = new Job ("Product tester", new Employer(""), new Location(""), new PositionType("Quality control"),new CoreCompetency("Persistence"));
 
   @Test
     public void TestUnequalIdIdenticalFields() {

@@ -43,31 +43,31 @@ public class Job {
             return str = "OOPS! This job does not seem to exist.";
         }
 
-        if (this.name == null) {
+        if (this.name == "") {
             str = str + "\nName: " + "Data not available" ;
         } else {
             str = str + "\nName: " + this.name ;
         }
 
-        if (this.employer.getValue() == null) {
+        if (this.employer.getValue() == "") {
             str = str + "\nEmployer: " + "Data not available" ;
         } else {
             str = str + "\nEmployer: " + this.employer ;
         }
 
-        if (this.location.getValue() == null) {
+        if (this.location.getValue() == "") {
             str = str + "\nLocation: " + "Data not available" ;
         } else {
             str = str + "\nLocation: " + this.location ;
         }
 
-        if (this.positionType.getValue() == null) {
+        if (this.positionType.getValue() == "") {
             str = str + "\nPosition Type: " + "Data not available" ;
         } else {
             str = str + "\nPosition Type: " + this.positionType ;
         }
 
-        if (this.coreCompetency.getValue() == null) {
+        if (this.coreCompetency.getValue() == "") {
             str = str + "\nCore Competency: " + "Data not available\n" ;
         } else {
             str = str + "\nCore Competency: " + this.coreCompetency + "\n" ;
