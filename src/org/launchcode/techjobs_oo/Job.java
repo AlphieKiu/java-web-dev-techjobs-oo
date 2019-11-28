@@ -34,6 +34,48 @@ public class Job {
     // TODO: Add custom equals and hashCode methods. Consider two Job objects "equal" when their id fields
     //  match
 
+
+    @Override
+    public String toString() {
+        String str= "\nID: " + this.id;;
+
+        if (this.name == null && this.employer == null && this.location == null && this.positionType == null && this.coreCompetency == null) {
+            return str = "OOPS! This job does not seem to exist.";
+        }
+
+        if (this.name == null) {
+            str = str + "\nName: " + "Data not available" ;
+        } else {
+            str = str + "\nName: " + this.name ;
+        }
+
+        if (this.employer.getValue() == null) {
+            str = str + "\nEmployer: " + "Data not available" ;
+        } else {
+            str = str + "\nEmployer: " + this.employer ;
+        }
+
+        if (this.location.getValue() == null) {
+            str = str + "\nLocation: " + "Data not available" ;
+        } else {
+            str = str + "\nLocation: " + this.location ;
+        }
+
+        if (this.positionType.getValue() == null) {
+            str = str + "\nPosition Type: " + "Data not available" ;
+        } else {
+            str = str + "\nPosition Type: " + this.positionType ;
+        }
+
+        if (this.coreCompetency.getValue() == null) {
+            str = str + "\nCore Competency: " + "Data not available\n" ;
+        } else {
+            str = str + "\nCore Competency: " + this.coreCompetency + "\n" ;
+        }
+
+        return str;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -74,26 +116,26 @@ public class Job {
     }
 
     public int getId() {
-        return id;
+        return this.id;
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public Employer getEmployer() {
-        return employer;
+        return this.employer;
     }
 
     public Location getLocation() {
-        return location;
+        return this.location;
     }
 
     public PositionType getPositionType() {
-        return positionType;
+        return this.positionType;
     }
 
     public CoreCompetency getCoreCompetency() {
-        return coreCompetency;
+        return this.coreCompetency;
     }
 }
